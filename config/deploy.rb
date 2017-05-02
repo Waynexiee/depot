@@ -2,9 +2,9 @@
 lock "3.8.0"
 
 set :application, "depot"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:Waynexiee/depot.git"
 
-set :deploy_to, '/home/deploy/my_app_name'
+set :deploy_to, '/home/deploy/depot'
 
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"
@@ -14,7 +14,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
 
-# Default value for :format is :airbrussh.
+# Default value for :format is :airbrussh
 # set :format, :airbrussh
 
 # You can configure the Airbrussh format using :format_options.

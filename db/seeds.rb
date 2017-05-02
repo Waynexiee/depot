@@ -17,6 +17,6 @@ Product.create(title: 'Seven Mobile Apps in Seven Weeks',
                     experienced developer needing to expand your options. Plus, you’ll find
                     out which cross-platform solution makes the most sense for your needs.
                     </p>},
-               image_url: '7apps.jpg',
+               image_url: '//www.baidu.com/img/bd_logo1.png',
                price: 26.00)
 #...
