@@ -68,7 +68,7 @@ body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
     }
 
     #cart {
-      font-size: smaller;
+      font-size: small;
       color: white;
 
       table {
@@ -153,4 +153,9 @@ body, body > p, body > ol, body > ul, body > td {margin: 8px !important}
 
 #time {
   color: white
+}
+
+#button {
+  color: greenyellow;
+  background: green;
 }

@@ -58,6 +58,7 @@ class CartsController < ApplicationController
     @cart.destroy
     respond_to do |format|
       format.html { redirect_to store_index_url }
+      # format.js
       format.json { head :no_content }
     end
   end
@@ -77,3 +78,4 @@ class CartsController < ApplicationController
       params.fetch(:cart, {})
     end
 end
+
