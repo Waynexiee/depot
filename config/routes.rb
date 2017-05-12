@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'admin' => 'admin#index'
+  post '/tracker' => 'carts#update'
 
   controller :sessions do
     get 'login' => :new
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
+
   resources :products do
     get :who_bought, on: :member
   end
@@ -15,6 +17,7 @@ Rails.application.routes.draw do
   resources :line_items do
     put 'decrement', on: :member
   end
+
 
   scope '(:locale)' do
     resources :orders

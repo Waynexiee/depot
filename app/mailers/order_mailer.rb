@@ -5,10 +5,10 @@ class OrderMailer < ApplicationMailer
   #
   #   en.order_mailer.received.subject
   #
-  def received (order)
+  def received (order,cart)
     @order = order
-
-    mail to: order.email, subject: 'Pragmatic Store Order Confirmation'
+    @cart = cart
+    mail to: @order.email, subject: 'Pragmatic Store Order Confirmation'
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -19,6 +19,6 @@ class OrderMailer < ApplicationMailer
   def shipped (order)
     @order = order
 
-    mail to: order.email, subject: 'Pragmatic Store Order Shipped'
+    mail to: @order.email, subject: 'Pragmatic Store Order Shipped'
   end
 end

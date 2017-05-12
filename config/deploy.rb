@@ -4,7 +4,7 @@ lock "3.8.0"
 set :application, "depot"
 set :repo_url, "git@github.com:Waynexiee/depot.git"
 
-set :deploy_to, '/home/deploy/depot'
+set :deploy_to, '$home/deploy/depot'
 
 append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bundle", "public/system", "public/uploads"

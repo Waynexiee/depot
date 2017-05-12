@@ -1,5 +1,25 @@
-<h1>Order#received</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <h3>Pragmatic Order Confirmation</h3>
 
-<p>
-  <%= @greeting %>, find me in app/views/order_mailer/received.html.erb
-</p>
+  <table>
+    <% @cart.line_items.each do |line_item| %>
+      <tr>
+        <td><%= line_item.quantity %>&times;</td>
+        <td><%= line_item.product.title %></td>
+        <td><%= number_to_currency(line_item.total_price) %></td>
+      </tr>
+    <% end %>
+    <tr class="total_line">
+      <td colspan="2">Total</td>
+      <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+    </tr>
+  </table>
+  <div>NAME:      <%= @order.name %></div>
+  <div>ADDRESS:   <%= @order.address %></div>
+  <div>EMAIL:     <%= @order.email %></div>
+  <div>PAY_TYPE:  <%= @order.pay_type %></div>
+</html>

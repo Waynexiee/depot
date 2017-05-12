@@ -16,8 +16,12 @@ class ApplicationController < ActionController::Base
       end
     end
     def authorize
-      unless User.find_by(id: session[:user_id])
+      unless  User.find_by(id: session[:user_id]) or User.count == 0
         redirect_to login_url, notice: "Please log in"
+      end
+
+      if User.count == 0
+        flash[:notice] = "Please create the first user account"
       end
     end
 end

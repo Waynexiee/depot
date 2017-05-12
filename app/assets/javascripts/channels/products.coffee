@@ -7,4 +7,5 @@ App.products = App.cable.subscriptions.create "ProductsChannel",
 
   received: (data) ->
     $(".store #main").html(data.html)
+    $.post '/tracker', { data: data["id"] }
     # Called when there's incoming data on the websocket for this channel

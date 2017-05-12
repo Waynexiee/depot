@@ -54,6 +54,13 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
       assert_equal ruby_book, line_item.product
 
 
+      delete "/logout"
+      assert_redirected_to store_index_url
+
+      get "/users"
+      assert_redirected_to login_url
+
+
     end
   end
 end
